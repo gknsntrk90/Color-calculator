@@ -1,0 +1,119 @@
+html{
+    box-sizing: border-box;
+    height: 100%;
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    align-items: center;
+    background: linear-gradient(320deg, #2040f7, #ffe93f, #1f04b6);
+    display: flex;
+    font-family: 'Dosis', sans-serif;
+    font-display: swap;
+    /** height: inherit; aşağı çekiyor şablonu**/
+    height: inherit;
+    justify-content: center;
+}
+
+.wrapper{
+    /**Bu şekilde border'a sığdırıyoruz yuvarlak olarak **/
+    backdrop-filter: blue(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: #232323;
+    backdrop-filter: blue(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.30);
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    /** flex-basis borderımızı genişlik veriyor!**/
+    flex-basis: 400px;
+    height: 540px;
+    padding: 20px 35px;
+}
+
+.screen{
+    /**Bu css ile ise hesapmakinesi rakamlarımızın üzerine box açıyoruz!**/
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: #232323;
+    font-size: 35px;
+    overflow: auto;
+    padding: 20px;
+    text-align: right;
+    width: 326px;
+}
+
+
+.calc-button-row{
+    /**Bu şekilde buttonlarımızı birbirinden ayırıyoruz**/
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 0;
+}
+
+.calc-button{
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: #232323;
+    /** flex-basis ile rakamlarımızın etrafında ki mesafeleri düzeltiyoruz! **/
+    flex-basis: 20%;
+    font-family: inherit;
+    /** rakamlarımızı daha belirgin şekilde ayarlıyoruz **/
+    font-size: 24px;
+    height: 65px;
+}
+
+
+/** Bu codlar ile ise hesapmakinemizin sağ taraftaki tuşlarına renk vermiş oluyoruz!**/
+.calc-button:last-child{
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    /** Box içinde kileri beyaz yapıyoruz**/
+    color: #fff;
+    background: #0184a5;
+}
+
+.cacl-button:last-child:hover{
+    background-color: inherit;
+    color: inherit;
+}
+
+.calc-button:hover{
+    /** üst elementin değerini alıyor **/
+    /** ve tuşların üzerine mouse geldimi buttonlar rensksiz olarak yanıp sönüyor **/
+    background-color: inherit;
+}
+
+/**Burada ise butonlara renk vermiş oluyoruz mouse ile üzerine gelince **/
+/**Ve butonlara tıkladığımız an mavi oluyor içinde ki rakam ise sarı oluyor **/
+.calc-button:active{
+    background-color: #0003c5;
+    color: #ffe93f;
+}
+
+.double{
+    flex-basis: 47%;
+}
+
+.triple{
+    flex-basis: 73%;
+}
